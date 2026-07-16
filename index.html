@@ -881,7 +881,7 @@
           <!-- 우측: 메일 전송 폼 (Web3Forms 연동) -->
           <div class="col-lg-7">
             <!-- action에 Web3Forms API 주소를 넣고, 아래 hidden input에 발급받은 키를 넣으면 작동합니다 -->
-            <form action="https://api.web3forms.com/submit" method="POST" class="email-form-custom" style="background: var(--surface-color); padding: 30px; height: 100%; box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);">
+            <form action="https://api.web3forms.com/submit" method="POST" class="email-form-custom" style="background: var(--gh-bg-sub) !important; padding: 30px; height: 100%; box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); border: 1px solid var(--gh-border) !important; border-radius: 8px;">
               
               <!-- ★ 중요: Web3Forms에서 무료로 발급받은 Access Key를 여기에 입력하세요 -->
               <input type="hidden" name="access_key" value="4193369f-b56a-42e3-b099-249fa2aeb03b">
@@ -890,36 +890,37 @@
 
               <div class="row gy-4">
                 <div class="col-md-6">
-                  <label for="name-field" class="pb-2">업체명 / 담당자 성함</label>
-                  <input type="text" name="name" id="name-field" class="form-control" required placeholder="예: 레이저테크 / 홍길동 팀장">
+                  <label for="name-field" class="pb-2" style="color: var(--gh-text-main) !important; font-weight: 500;">업체명 / 담당자 성함</label>
+                  <input type="text" name="name" id="name-field" class="form-control" required placeholder="예: 레이저테크 / 홍길동 팀장" style="background-color: var(--gh-bg-main) !important; color: var(--gh-text-main) !important; border: 1px solid var(--gh-border) !important;">
                 </div>
 
                 <div class="col-md-6">
-                  <label for="email-field" class="pb-2">답변받을 이메일 주소</label>
-                  <input type="email" class="form-control" name="email" id="email-field" required placeholder="예: contact@lasertech.com">
+                  <label for="email-field" class="pb-2" style="color: var(--gh-text-main) !important; font-weight: 500;">답변받을 이메일 주소</label>
+                  <input type="email" class="form-control" name="email" id="email-field" required placeholder="예: contact@lasertech.com" style="background-color: var(--gh-bg-main) !important; color: var(--gh-text-main) !important; border: 1px solid var(--gh-border) !important;">
                 </div>
 
                 <div class="col-md-12">
-                  <label for="subject-field" class="pb-2">문의 유형</label>
-                  <select name="subject" id="subject-field" class="form-control" required style="height: 45px; border-radius: 0;">
-                    <option value="">-- 선택해 주세요 --</option>
-                    <option value="OEM 전용 마킹 S/W 개발 의뢰">OEM 전용 마킹 S/W 개발 의뢰</option>
-                    <option value="스마트팩토리 / DB / PLC 연동 상담">스마트팩토리 / DB / PLC 연동 상담</option>
-                    <option value="기타 기술 지원 및 유지보수 문의">기타 기술 지원 및 유지보수 문의</option>
+                  <label for="subject-field" class="pb-2" style="color: var(--gh-text-main) !important; font-weight: 500;">문의 유형</label>
+                  <select name="subject" id="subject-field" class="form-control" required style="height: 45px; border-radius: 4px; background-color: var(--gh-bg-main) !important; color: var(--gh-text-main) !important; border: 1px solid var(--gh-border) !important;">
+                    <option value="" style="background-color: var(--gh-bg-main); color: var(--gh-text-main);">-- 선택해 주세요 --</option>
+                    <option value="OEM 전용 마킹 S/W 개발 의뢰" style="background-color: var(--gh-bg-main); color: var(--gh-text-main);">OEM 전용 마킹 S/W 개발 의뢰</option>
+                    <option value="스마트팩토리 / DB / PLC 연동 상담" style="background-color: var(--gh-bg-main); color: var(--gh-text-main);">스마트팩토리 / DB / PLC 연동 상담</option>
+                    <option value="기타 기술 지원 및 유지보수 문의" style="background-color: var(--gh-bg-main); color: var(--gh-text-main);">기타 기술 지원 및 유지보수 문의</option>
                   </select>
                 </div>
 
                 <div class="col-md-12">
-                  <label for="message-field" class="pb-2">장비 사양 및 문의 내용</label>
-                  <textarea class="form-control" name="message" rows="10" id="message-field" required placeholder="상용 제어 보드 기재(예: RTC), 레이저 소스 종류 및 구체적인 소프트웨어 커스텀 요구사항을 자유롭게 작성해 주세요."></textarea>
+                  <label for="message-field" class="pb-2" style="color: var(--gh-text-main) !important; font-weight: 500;">장비 사양 및 문의 내용</label>
+                  <textarea class="form-control" name="message" rows="10" id="message-field" required placeholder="상용 제어 보드 기재(예: RTC), 레이저 소스 종류 및 구체적인 소프트웨어 커스텀 요구사항을 자유롭게 작성해 주세요." style="background-color: var(--gh-bg-main) !important; color: var(--gh-text-main) !important; border: 1px solid var(--gh-border) !important;"></textarea>
                 </div>
 
                 <div class="col-md-12 text-center">
-                  <button type="submit" style="background: #47b2e4; border: 0; padding: 12px 35px; color: #fff; transition: 0.4s; border-radius: 50px; font-weight: bold;">문의 메일 전송하기</button>
+                  <button type="submit" style="background: var(--gh-accent) !important; border: 0; padding: 12px 35px; color: #fff; transition: 0.4s; border-radius: 50px; font-weight: bold; cursor: pointer;">문의 메일 전송하기</button>
                 </div>
               </div>
             </form>
-          </div><!-- End Contact Form -->
+          </div>
+          <!-- End Contact Form -->
 
         </div>
 
