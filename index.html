@@ -70,102 +70,92 @@
 
   <main class="main">
 
-    <!-- Hero Section -->
-  <section id="hero" class="hero section dark-background" style="padding: 0;">
+  <!-- Hero Section -->
+  <section id="hero" class="hero section dark-background">
 
-    <!-- Swiper 슬라이더 적용 (자동 롤링, 4.5초 간격) -->
-    <div class="swiper init-swiper" data-config='{
-      "loop": true,
-      "speed": 800,
-      "autoplay": {
-        "delay": 4500,
-        "disableOnInteraction": false
-      },
-      "slidesPerView": 1,
-      "pagination": {
-        "el": ".hero-pagination",
-        "type": "bullets",
-        "clickable": true
-      }
-    }'>
-      <div class="swiper-wrapper">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        
+        <!-- 좌측: 기존 타이틀, 설명글, 버튼 (고정 영역 - 변경되지 않음) -->
+        <div class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="zoom-out">
+          <h1>산업용 레이저 마킹을 위한<br>맞춤형 통합 제어 소프트웨어</h1>
+          <p>기본 마킹부터 복잡한 자동화 라인 연동까지,<br>장비 스펙과 생산 환경에 최적화된 독자적 솔루션을 제공합니다.</p>
+          <div class="d-flex justify-content-center justify-content-lg-start">
+            <!-- 주요 행동 유도 버튼 (강조색) -->
+            <a href="#contact" class="btn-get-started">맞춤 솔루션 문의</a>
+            <!-- 보조 버튼 -->
+            <a href="#about" class="btn-get-started" style="background: transparent; border: 2px solid #fff; margin-left: 15px;">솔루션 소개</a>
+          </div>
+        </div>
 
-        <!-- [슬라이드 1] RTC 4 대응 메인 -->
-        <div class="swiper-slide d-flex align-items-center" style="min-height: 80vh; padding: 60px 0;">
-          <div class="container">
-            <div class="row gy-4 align-items-center">
-              <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
-                <span style="color: #47b2e4; font-weight: bold; letter-spacing: 1px; margin-bottom: 10px;">RTC 4 BOARD SUPPORT</span>
-                <h1 style="font-size: 3rem; font-weight: 700; line-height: 1.2;">RTC4 보드 기반의<br>안정적인 마킹 솔루션</h1>
-                <p style="font-size: 1.1rem; margin: 15px 0 30px 0; opacity: 0.85;">
-                  오랜 기간 검증된 16비트 주소 체계 표준인 RTC4 보드를 지원합니다.<br>
-                  합리적인 비용으로 시스템 성능을 끌어올리는 안정적인 독자 소프트웨어입니다.
-                </p>
-                <div class="d-flex justify-content-center justify-content-lg-start">
-                  <a href="#contact" class="btn-get-started">맞춤 솔루션 문의</a>
-                  <a href="#about" class="btn-get-started" style="background: transparent; border: 2px solid #fff; margin-left: 15px;">솔루션 소개</a>
+        <!-- 우측: RTC4, RTC5, RTC6 보드가 전환되는 슬라이더 영역 -->
+        <div class="col-lg-7 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="200" style="position: relative;">
+          
+          <!-- Swiper 컨테이너 (템플릿 내부 main.js가 자동으로 감지할 수 있는 클래스 구조) -->
+          <div class="swiper init-swiper" data-config='{
+            "loop": true,
+            "speed": 600,
+            "autoplay": {
+              "delay": 3500,
+              "disableOnInteraction": false
+            },
+            "slidesPerView": 1,
+            "navigation": {
+              "nextEl": ".swiper-button-next",
+              "prevEl": ".swiper-button-prev"
+            },
+            "pagination": {
+              "el": ".swiper-pagination",
+              "type": "bullets",
+              "clickable": true
+            }
+          }'>
+            <div class="swiper-wrapper">
+
+              <!-- RTC4 Slide -->
+              <div class="swiper-slide text-center">
+                <div class="board-slide-content">
+                  <span class="badge mb-2" style="background: #47b2e4;">Legacy Standard</span>
+                  <h4 class="text-white mb-2">RTC 4 Board</h4>
+                  <img src="assets/img/hero-img.png" class="img-fluid animated" alt="RTC 4" style="max-height: 280px;">
+                  <p class="text-white-50 mt-2 mb-0" style="font-size: 0.9rem;">신뢰성 높은 16비트 스캔헤드 제어의 표준</p>
                 </div>
               </div>
-              <div class="col-lg-6 order-1 order-lg-2 hero-img text-center">
-                <!-- 실제 RTC4 보드 이미지나 관련 그래픽 이미지 경로를 매칭해 주세요 -->
-                <img src="assets/img/hero-img.png" class="img-fluid animated" alt="RTC 4 Solution" style="max-height: 400px;">
-              </div>
-            </div>
-          </div>
-        </div><!-- /Slide 1 -->
 
-        <!-- [슬라이드 2] RTC 5 대응 메인 -->
-        <div class="swiper-slide d-flex align-items-center" style="min-height: 80vh; padding: 60px 0;">
-          <div class="container">
-            <div class="row gy-4 align-items-center">
-              <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
-                <span style="color: #47b2e4; font-weight: bold; letter-spacing: 1px; margin-bottom: 10px;">RTC 5 BOARD OPTIMIZED</span>
-                <h1 style="font-size: 3rem; font-weight: 700; line-height: 1.2;">RTC5 고정밀 마킹을 위한<br>실시간 제어 솔루션</h1>
-                <p style="font-size: 1.1rem; margin: 15px 0 30px 0; opacity: 0.85;">
-                  20비트 초고정밀 스캔헤드 제어 및 뛰어난 실시간 가공 동기화를 실현합니다.<br>
-                  대량 생산 라인과 정밀 패터닝 공정에 완벽하게 대응합니다.
-                </p>
-                <div class="d-flex justify-content-center justify-content-lg-start">
-                  <a href="#contact" class="btn-get-started">맞춤 솔루션 문의</a>
-                  <a href="#about" class="btn-get-started" style="background: transparent; border: 2px solid #fff; margin-left: 15px;">솔루션 소개</a>
+              <!-- RTC5 Slide -->
+              <div class="swiper-slide text-center">
+                <div class="board-slide-content">
+                  <span class="badge mb-2" style="background: #28a745;">High Performance</span>
+                  <h4 class="text-white mb-2">RTC 5 Board</h4>
+                  <!-- 이미지가 준비되면 각 보드 이미지 경로로 수정해 주시면 됩니다 -->
+                  <img src="assets/img/hero-img.png" class="img-fluid animated" alt="RTC 5" style="max-height: 280px;">
+                  <p class="text-white-50 mt-2 mb-0" style="font-size: 0.9rem;">20비트 고해상도 포지셔닝 및 실시간 가공 지원</p>
                 </div>
               </div>
-              <div class="col-lg-6 order-1 order-lg-2 hero-img text-center">
-                <!-- RTC5 관련 이미지 경로를 넣어주세요 -->
-                <img src="assets/img/hero-img.png" class="img-fluid animated" alt="RTC 5 Solution" style="max-height: 400px;">
-              </div>
-            </div>
-          </div>
-        </div><!-- /Slide 2 -->
 
-        <!-- [슬라이드 3] RTC 6 대응 메인 -->
-        <div class="swiper-slide d-flex align-items-center" style="min-height: 80vh; padding: 60px 0;">
-          <div class="container">
-            <div class="row gy-4 align-items-center">
-              <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
-                <span style="color: #47b2e4; font-weight: bold; letter-spacing: 1px; margin-bottom: 10px;">RTC 6 FLAGSHIP SOLUTION</span>
-                <h1 style="font-size: 3rem; font-weight: 700; line-height: 1.2;">RTC6 차세대 3D 가공 및<br>초고속 레이저 통합 제어</h1>
-                <p style="font-size: 1.1rem; margin: 15px 0 30px 0; opacity: 0.85;">
-                  24비트 대용량 연산 처리 및 3D 스캔 기술을 완벽하게 다스립니다.<br>
-                  반도체와 첨단 디스플레이 자동화 공정에 특화된 독자 알고리즘을 지원합니다.
-                </p>
-                <div class="d-flex justify-content-center justify-content-lg-start">
-                  <a href="#contact" class="btn-get-started">맞춤 솔루션 문의</a>
-                  <a href="#about" class="btn-get-started" style="background: transparent; border: 2px solid #fff; margin-left: 15px;">솔루션 소개</a>
+              <!-- RTC6 Slide -->
+              <div class="swiper-slide text-center">
+                <div class="board-slide-content">
+                  <span class="badge mb-2" style="background: #6f42c1;">Flagship Solution</span>
+                  <h4 class="text-white mb-2">RTC 6 Board</h4>
+                  <img src="assets/img/hero-img.png" class="img-fluid animated" alt="RTC 6" style="max-height: 280px;">
+                  <p class="text-white-50 mt-2 mb-0" style="font-size: 0.9rem;">3D 가공 및 초고속 연산을 위한 차세대 솔루션</p>
                 </div>
               </div>
-              <div class="col-lg-6 order-1 order-lg-2 hero-img text-center">
-                <!-- RTC6 관련 이미지 경로를 넣어주세요 -->
-                <img src="assets/img/hero-img.png" class="img-fluid animated" alt="RTC 6 Solution" style="max-height: 400px;">
-              </div>
+
             </div>
+
+            <!-- 좌우 화살표 버튼 -->
+            <div class="swiper-button-prev" style="color: #ffffff; --swiper-navigation-size: 20px;"></div>
+            <div class="swiper-button-next" style="color: #ffffff; --swiper-navigation-size: 20px;"></div>
+
+            <!-- 하단 선택 동그라미 버튼 -->
+            <div class="swiper-pagination" style="position: relative; margin-top: 20px;"></div>
           </div>
-        </div><!-- /Slide 3 -->
+
+        </div>
 
       </div>
-      
-      <!-- 화면 하단에 슬라이드 위치를 나타내는 흰색 동그라미(인디케이터) 배치 -->
-      <div class="hero-pagination" style="text-align: center; position: absolute; bottom: 20px; width: 100%; z-index: 10;"></div>
     </div>
 
   </section><!-- /Hero Section -->
