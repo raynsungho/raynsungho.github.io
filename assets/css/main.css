@@ -3575,3 +3575,82 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
 }
+
+/* ==========================================================================
+   GitHub Dark Theme Integration for Arsha Template
+   ========================================================================== */
+
+   :root {
+    /* GitHub 다크모드 팔레트 정의 */
+    --gh-bg-main: #0d1117;
+    --gh-bg-sub: #161b22;
+    --gh-border: #30363d;
+    --gh-text-main: #e6edf3;
+    --gh-text-muted: #8d96a0;
+    --gh-accent: #2f81f7; /* GitHub 블루 포인트 컬러 */
+  }
+  
+  /* 1. 전체 바디 및 기본 텍스트 변경 */
+  body {
+    background-color: var(--gh-bg-main) !important;
+    color: var(--gh-text-main) !important;
+  }
+  
+  /* 2. Arsha 기본 섹션 배경색 대응 */
+  section, .section {
+    background-color: var(--gh-bg-main) !important;
+    color: var(--gh-text-main) !important;
+  }
+  
+  /* 3. 징검다리 형태로 들어가는 연한 배경 섹션 (예: Portfolio, Why-us 등) */
+  .section-bg, 
+  .services, 
+  .portfolio, 
+  .contact,
+  #footer {
+    background-color: var(--gh-bg-sub) !important;
+  }
+  
+  /* 4. 제목(H1 ~ H6) 및 중요 텍스트 색상 교체 */
+  h1, h2, h3, h4, h5, h6, 
+  .section-title h2, 
+  .portfolio-info h4 {
+    color: var(--gh-text-main) !important;
+  }
+  
+  /* 5. 설명 및 서브 텍스트 색상 톤다운 */
+  p, 
+  .section-title p, 
+  .portfolio-info p {
+    color: var(--gh-text-muted) !important;
+  }
+  
+  /* 6. 포트폴리오 필터 버튼 (GitHub 스타일로 변경) */
+  .portfolio-filters li {
+    color: var(--gh-text-muted) !important;
+    background-color: var(--gh-bg-main) !important;
+    border: 1px solid var(--gh-border) !important;
+    border-radius: 6px;
+    padding: 6px 16px !important;
+    transition: all 0.2s ease;
+  }
+  
+  .portfolio-filters li:hover,
+  .portfolio-filters li.filter-active {
+    color: #fff !important;
+    background-color: var(--gh-accent) !important;
+    border-color: var(--gh-accent) !important;
+  }
+  
+  /* 7. 포트폴리오 아이템 카드 내부 스타일 지정 */
+  .portfolio-item {
+    border: 1px solid var(--gh-border) !important;
+    background-color: var(--gh-bg-main) !important;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .portfolio-info {
+    background-color: rgba(22, 27, 34, 0.9) !important; /* GitHub sub 배경 투명도 적용 */
+    border-top: 1px solid var(--gh-border) !important;
+  }
