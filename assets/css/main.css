@@ -3655,18 +3655,40 @@ section,
     border-top: 1px solid var(--gh-border) !important;
   }
 
-  /* Arsha 템플릿의 스타일 우선순위를 확실히 넘어서는 커스텀 보조 버튼 정의 */
-#hero .btn-get-started.btn-hero-secondary {
-  background: transparent !important;
-  border: 2px solid #ffffff !important;
-  color: #ffffff !important;
-  margin-left: 15px !important;
-  transition: all 0.3s ease-in-out !important;
-}
+  /* ==========================================
+   Hero Section 하단 슬라이더 점(Pagination) 보정
+   ========================================== */
+  /* 1. 슬라이더 하단 영역 확보 */
+  #hero .swiper-pagination {
+    bottom: 35px !important;
+    z-index: 999 !important;
+    display: block !important;
+  }
 
-#hero .btn-get-started.btn-hero-secondary:hover {
-  background: rgba(255, 255, 255, 0.18) !important;
-  border-color: #ffffff !important;
-  color: #ffffff !important;
-  box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.15) !important;
-}
+  /* 2. 비활성화된 기본 점 스타일 (가독성 대폭 향상) */
+  #hero .swiper-pagination-bullet {
+    background-color: #ffffff !important;
+    /* 기본 투명도를 0.5로 대폭 올려서 어둠 속에서도 또렷이 보이게 합니다 */
+    opacity: 0.55 !important; 
+    width: 12px !important;
+    height: 12px !important;
+    margin: 0 8px !important;
+    display: inline-block !important;
+    transition: all 0.3s ease !important;
+    cursor: pointer !important;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5) !important; /* 약간의 그림자로 입체감 부여 */
+  }
+
+  /* 3. 마우스를 올렸을 때 (Hover) */
+  #hero .swiper-pagination-bullet:hover {
+    opacity: 0.85 !important;
+    transform: scale(1.15);
+  }
+
+  /* 4. 현재 활성화된 점 스타일 (메인 브랜드 컬러인 하늘색으로 강조) */
+  #hero .swiper-pagination-bullet-active {
+    background-color: #47b2e4 !important;
+    opacity: 1 !important;
+    width: 28px !important; /* 활성화 시 가로로 길어지며 시각적 피드백 제공 */
+    border-radius: 6px !important;
+  }
