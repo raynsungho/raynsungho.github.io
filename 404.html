@@ -4,6 +4,16 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  
+  <!-- [추가된 코드] 1.5초 뒤에 자동으로 메인 홈페이지로 이동합니다. -->
+  <meta http-equiv="refresh" content="1.5; url=https://www.rayn.co.kr">
+  <script type="text/javascript">
+    // 혹시 메타 태그가 작동하지 않을 때를 대비해 1.5초(1500ms) 뒤 메인으로 이동시키는 안전장치
+    setTimeout(function() {
+      window.location.href = "https://www.rayn.co.kr";
+    }, 1500);
+  </script>
+
   <title>404 - Arsha Bootstrap Template</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
@@ -110,31 +120,22 @@
 
           <h1 class="error-code mb-4" data-aos="fade-up" data-aos-delay="300">404</h1>
 
-          <h2 class="error-title mb-3" data-aos="fade-up" data-aos-delay="400">Oops! Page Not Found</h2>
+          <h2 class="error-title mb-3" data-aos="fade-up" data-aos-delay="400">페이지를 찾을 수 없습니다</h2>
 
           <p class="error-text mb-4" data-aos="fade-up" data-aos-delay="500">
-            The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
+            입력하신 주소가 잘못되었거나, 변경 혹은 삭제되어 요청하신 페이지를 찾을 수 없습니다.<br>
+            <strong>잠시 후 메인 홈페이지로 자동으로 이동합니다.</strong>
           </p>
 
-          <div class="search-box mb-4" data-aos="fade-up" data-aos-delay="600">
-            <form action="#" class="search-form">
-              <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search for pages..." aria-label="Search">
-                <button class="btn search-btn" type="submit">
-                  <i class="bi bi-search"></i>
-                </button>
-              </div>
-            </form>
-          </div>
-
           <div class="error-action" data-aos="fade-up" data-aos-delay="700">
-            <a href="/" class="btn btn-primary">Back to Home</a>
+            <!-- 메인 도메인 주소로 깔끔하게 연결해 주었습니다 -->
+            <a href="https://www.rayn.co.kr" class="btn btn-primary">메인으로 이동하기</a>
           </div>
         </div>
 
       </div>
 
-    </section><!-- /Error 404 Section -->
+    </</section><!-- /Error 404 Section -->
 
   </main>
 
@@ -208,10 +209,6 @@
     <div class="container copyright text-center mt-4">
       <p>© <span>Copyright</span> <strong class="px-1 sitename">Arsha</strong> <span>All Rights Reserved</span></p>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> | <a href="https://bootstrapmade.com/tools/">DevTools</a>
       </div>
     </div>
