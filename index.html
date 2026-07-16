@@ -73,25 +73,29 @@
   <!-- Hero Section (SW + RTC 보드 일체형 통합 슬라이더) -->
   <section id="hero" class="hero section dark-background" style="padding: 0;">
 
-    <!-- Swiper 슬라이더 적용 (자동 롤링 4.5초 간격, 좌우 화살표 및 하단 선택 버튼 포함) -->
-    <div class="swiper init-swiper" data-config='{
-      "loop": true,
-      "speed": 800,
-      "autoplay": {
-        "delay": 4500,
-        "disableOnInteraction": false
-      },
-      "slidesPerView": 1,
-      "navigation": {
-        "nextEl": ".hero-next",
-        "prevEl": ".hero-prev"
-      },
-      "pagination": {
-        "el": ".hero-pagination",
-        "type": "bullets",
-        "clickable": true
-      }
-    }' style="position: relative;">
+    <div class="swiper init-swiper" style="position: relative;">
+      
+      <!-- Arsha v5+ 전용 Swiper 설정 제어 스크립트 -->
+      <script type="application/json" class="swiper-config">
+        {
+          "loop": true,
+          "speed": 800,
+          "autoplay": {
+            "delay": 4500,
+            "disableOnInteraction": false
+          },
+          "slidesPerView": 1,
+          "navigation": {
+            "nextEl": ".swiper-button-next",
+            "prevEl": ".swiper-button-prev"
+          },
+          "pagination": {
+            "el": ".swiper-pagination",
+            "type": "bullets",
+            "clickable": true
+          }
+        }
+      </script>
       
       <div class="swiper-wrapper">
 
@@ -113,7 +117,6 @@
                 </div>
               </div>
               <div class="col-lg-6 order-1 order-lg-2 hero-img text-center">
-                <!-- 이미지 파일이 준비되면 rtc4 전용 그래픽(예: rtc4-pack.png)으로 교체해 주세요 -->
                 <img src="assets/img/hero-img.png" class="img-fluid animated" alt="RTC4 통합 패키지" style="max-height: 380px;">
               </div>
             </div>
@@ -138,7 +141,6 @@
                 </div>
               </div>
               <div class="col-lg-6 order-1 order-lg-2 hero-img text-center">
-                <!-- 이미지 파일이 준비되면 rtc5 전용 그래픽으로 교체해 주세요 -->
                 <img src="assets/img/hero-img.png" class="img-fluid animated" alt="RTC5 통합 패키지" style="max-height: 380px;">
               </div>
             </div>
@@ -163,7 +165,6 @@
                 </div>
               </div>
               <div class="col-lg-6 order-1 order-lg-2 hero-img text-center">
-                <!-- 이미지 파일이 준비되면 rtc6 전용 그래픽으로 교체해 주세요 -->
                 <img src="assets/img/hero-img.png" class="img-fluid animated" alt="RTC6 통합 패키지" style="max-height: 380px;">
               </div>
             </div>
@@ -172,12 +173,10 @@
 
       </div>
 
-      <!-- 좌우 화살표 내비게이션 -->
-      <div class="hero-prev"><i class="bi bi-chevron-left"></i></div>
-      <div class="hero-next"><i class="bi bi-chevron-right"></i></div>
-
-      <!-- 하단 선택 동그라미(페이지네이션) -->
-      <div class="hero-pagination"></div>
+      <!-- 내장 클래스로 수정된 네비게이션 및 페이지네이션 -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-pagination"></div>
 
     </div>
 
